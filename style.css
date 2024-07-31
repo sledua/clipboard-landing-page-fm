@@ -1,0 +1,239 @@
+:root {
+    --color-primary-strong-cyan: hsl(171, 66%, 44%);
+    --color-primary-light-blue: hsl(233, 100%, 69%);
+    --color-neutral-dark-grayish-blue: hsl(210, 10%, 33%);
+    --color-neutral-grayish-blue: hsl(201, 11%, 66%);
+    --color-background: #fff;
+    --font-family: "Bai Jamjuree", sans-serif;
+    --font-size-base: 18px;
+    --spacing-base:  (truncated to comply with character limit);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    color: var(--color-neutral-dark-grayish-blue);
+    background-color: var(--color-background);
+    margin: 0 auto;
+    /* padding: 0 12rem; */
+}
+
+.header {
+    padding: var(--spacing-base);
+    text-align: center;
+}
+
+.header__logo {
+    width: 50px;
+    height: 50px;
+    background: url('logo.png') no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.main-content {
+    padding: var(--spacing-base);
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.intro__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro__description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro__buttons .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var( --color-primary-strong-cyan);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.intro__buttons .btn--ios {
+    background-color: var(--color-primary-light-blue);
+}
+
+.intro__buttons .btn:hover {
+    background-color: #333;
+}
+
+.features {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.features__title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.features__description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.features__block {
+    display: flex;
+    gap: 6rem;
+}
+.features__list {
+    /* display: flex; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.feature {
+    width: 100%;
+    max-width: 300px;
+    padding: var(--spacing-base);
+    text-align: center;
+}
+
+.feature__image {
+    width: 100px;
+    height: 100px;
+    /* margin-bottom: 1rem; */
+}
+
+.feature__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.feature__description {
+    font-size: 1rem;
+    color: #666;
+}
+
+.access {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.access__title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.access__description {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.access__image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.workflow {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.workflow__title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.workflow__features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.workflow__feature {
+    width: 100%;
+    max-width: 300px;
+    padding: var(--spacing-base);
+    text-align: center;
+}
+
+.workflow__image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.workflow__title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.workflow__description {
+    font-size: 1rem;
+    color: #666;
+}
+
+.footer {
+    text-align: center;
+    padding: var(--spacing-base);
+    background-color: #f5f5f5;
+}
+
+.footer__downloads .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var( --color-primary-strong-cyan);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.footer__downloads .btn--ios {
+    background-color: var(--color-primary-light-blue);
+}
+
+.footer__downloads .btn:hover {
+    background-color: #333;
+}
+
+.footer__info {
+    margin-top: 1rem;
+}
+
+.footer__info a {
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 1rem;
+    color: var(--color-neutral-dark-grayish-blue);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer__info a:hover {
+    color: var(--color-primary-strong-cyan);
+}
+
+@media (min-width: 375px) {
+    .features__list, .workflow__features {
+        flex-direction: row;
+    }
+
+    .feature, .workflow__feature {
+        /* width: calc(33.333% - .5rem); */
+        margin: 1rem;
+    }
+}
