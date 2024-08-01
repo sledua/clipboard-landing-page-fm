@@ -6,7 +6,7 @@
     --color-background: #fff;
     --font-family: "Bai Jamjuree", sans-serif;
     --font-size-base: 18px;
-    --spacing-base:  (truncated to comply with character limit);
+    --spacing-base:  2rem 0;
 }
 
 * {
@@ -18,42 +18,45 @@
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
+    font-weight: 400;
     color: var(--color-neutral-dark-grayish-blue);
     background-color: var(--color-background);
     margin: 0 auto;
-    /* padding: 0 12rem; */
 }
 
 .header {
-    padding: var(--spacing-base);
-    text-align: center;
+    padding: 5.2rem 0;
+    background: url('./images/bg-header-desktop.png') repeat;
 }
 
 .header__logo {
-    width: 50px;
-    height: 50px;
-    background: url('logo.png') no-repeat center;
-    background-size: contain;
+    width: 8rem;
+    height: 8rem;
     margin: 0 auto;
 }
 
 .main-content {
-    padding: var(--spacing-base);
+    /* padding: var(--spacing-base); */
 }
 
 .intro {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 5rem;
 }
 
 .intro__title {
     font-size: 2rem;
     margin-bottom: 1rem;
+    font-weight: 600;
+    
 }
 
 .intro__description {
+    max-width: 48%;
+    margin: 0 auto;
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    color: var(--color-neutral-grayish-blue);
+    margin-bottom: 2.5rem;
 }
 
 .intro__buttons .btn {
@@ -62,14 +65,14 @@ body {
     margin: 0.5rem;
     font-size: 1rem;
     color: #fff;
-    background-color: var( --color-primary-strong-cyan);
+    background-color: var( --color-primary-light-blue);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5rem;
     transition: background-color 0.3s;
 }
 
 .intro__buttons .btn--ios {
-    background-color: var(--color-primary-light-blue);
+    background-color: var(--color-primary-strong-cyan);
 }
 
 .intro__buttons .btn:hover {
@@ -88,14 +91,17 @@ body {
 
 .features__description {
     font-size: 1.2rem;
-    margin-bottom: 2rem;
+    max-width: 53%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+    color: var(--color-neutral-grayish-blue);
 }
 .features__block {
     display: flex;
-    gap: 6rem;
+    gap: 5rem;
+    overflow-x: clip;
 }
 .features__list {
-    /* display: flex; */
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
@@ -103,25 +109,28 @@ body {
 
 .feature {
     width: 100%;
-    max-width: 300px;
+    max-width: 21rem;
     padding: var(--spacing-base);
-    text-align: center;
+    text-align: start;
 }
 
-.feature__image {
-    width: 100px;
-    height: 100px;
-    /* margin-bottom: 1rem; */
+.image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-left: -2rem;
+    /* background-size: 0%; */
 }
-
 .feature__title {
     font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
+
 }
 
 .feature__description {
     font-size: 1rem;
-    color: #666;
+    color: var(--color-neutral-grayish-blue);
 }
 
 .access {
@@ -136,13 +145,16 @@ body {
 
 .access__description {
     font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+    color: var(--color-neutral-grayish-blue);
+    max-width: 53%;
+    margin: 0 auto;
+    padding-bottom: 4rem;
 }
 
 .access__image {
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    max-width: 31.25rem;
+    /* height: auto; */
 }
 
 .workflow {
@@ -169,21 +181,29 @@ body {
 }
 
 .workflow__image {
-    width: 100px;
-    height: 100px;
+    width: 3.5rem;
+    height: 2rem;
     margin-bottom: 1rem;
 }
 
 .workflow__title {
     font-size: 1.5rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .workflow__description {
     font-size: 1rem;
-    color: #666;
+    color: var(--color-neutral-grayish-blue);
+    line-height: 1.7;
 }
-
+.partners__list {
+    display: flex;
+    list-style-type: none;
+    gap: 3.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
 .footer {
     text-align: center;
     padding: var(--spacing-base);
@@ -196,14 +216,14 @@ body {
     margin: 0.5rem;
     font-size: 1rem;
     color: #fff;
-    background-color: var( --color-primary-strong-cyan);
+    background-color: var( --color-primary-light-blue);
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 5rem;
     transition: background-color 0.3s;
 }
 
 .footer__downloads .btn--ios {
-    background-color: var(--color-primary-light-blue);
+    background-color: var(--color-primary-strong-cyan);
 }
 
 .footer__downloads .btn:hover {
